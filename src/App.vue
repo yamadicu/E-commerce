@@ -1,15 +1,16 @@
 <script >
+import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 export default {
   name: 'app',
   components: {
+    HeaderComp,
     MainComp
   }
 }
 </script>
 
 <template>
-  <h1>Ciao mondo</h1>
   <MainComp></MainComp>
 </template>
 
