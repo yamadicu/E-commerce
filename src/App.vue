@@ -11,6 +11,7 @@ export default {
 </script>
 
 <template>
+  <HeaderComp></HeaderComp>
   <MainComp></MainComp>
 </template>
 

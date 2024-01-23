@@ -1,0 +1,97 @@
+<script>
+export default{
+    name: 'MainComp',
+}
+</script>
+
+<template>
+    <body>
+        <label id="summary">
+            <input type="checkbox"/>
+            <article>
+                <div class="front">
+                    <header>
+                        <h2>summary</h2>
+                        <span>more_vent</span>
+                    </header>
+                    <var>21</var>
+                    <h3>due Tasks</h3>
+                    <h4>Completed: 13</h4>
+                </div>
+                <div class="back">
+                    <header>
+                        <h2>Summary</h2>
+                        <span>close</span>
+                    </header>
+                    <p>More Information</p>
+                </div>
+            </article>
+        </label>
+        <!-- altre card -->
+    </body>
+    </template>
+
+<style lang="scss" scoped>
+body{
+    font-family: "Poppins";
+    article{
+        position: relative;
+        perspective: 1000px;
+        width: 300px;
+        height: 300px;
+    }
+    article Header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 26px;
+    }
+    article .front, article .back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        backface-visibility: hidden;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 24px;
+        transition: 0.6s;
+        cursor: pointer;
+    }.back{
+        transform: rotateY(180deg);
+    }
+
+    input{
+        position: absolute;
+        scale: 0;
+    }
+
+    input:checked ~ article .back{
+        transform: rotateY(0);
+    }
+
+    input:checked ~ article .front{
+        transform: rotateY(-180deg);
+    }
+
+    // article var sarà un immagine 
+    article var{
+        font-style: normal;
+        font-size: 80px;
+        line-height: 1;
+    }
+
+    article h3{
+        margin: 0 0 30px;
+        font-weight: 500;
+    }
+
+    h2,h3,h4{
+        margin: 0;
+        font-weight: 500;
+    }
+}
+</style>

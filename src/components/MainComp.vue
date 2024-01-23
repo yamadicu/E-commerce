@@ -1,20 +1,16 @@
 <script>
-import HeaderComp from './HeaderComp.vue';
-import FooterComp from './FooterComp.vue';
+import CardComp from './CardComp.vue';
 export default{
     name: 'MainComp',
-
-    components: {
-        HeaderComp,
-        FooterComp
+    components:{
+        CardComp
     }
 }
 </script>
 
 <template>
-    <HeaderComp></HeaderComp>
     <h1>componente main</h1>
-    <FooterComp></FooterComp>
+    <CardComp></CardComp>
 </template>
 
 <style lang="scss" scoped></style>
